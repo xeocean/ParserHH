@@ -22,4 +22,11 @@
 - scan.py - модуль (скрипт) для сканирования базы данных на наличие дубликатов и управления ими.
 - filter.py - модуль (скрипт) для анализа и фильтрации данных, позволяющий пользователю получать информацию по заданным критериям.
 
+## Quick Start
+1. Клонируйте репозиторий: `git clone https://github.com/xeocean/ParserHH.git`
+2. Создайте виртуальное окружение: `python -m venv venv`  
+   - Для Linux/macOS: `source venv/bin/activate`
+   - Для Windows: `venv\Scripts\activate`
+3. Установите зависимости: `pip install -r requirements.txt `
+4. Запустите приложение: `python main.py`
 
