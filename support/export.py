@@ -13,7 +13,7 @@ def export_db_to_excel(db_name: str, table_name: str = "vacancies"):
         db_path = Path(db_name)
         if db_path.exists() and db_path.is_file():
 
-            export_dir = "../export"
+            export_dir = Path("export")
             if not os.path.exists(export_dir):
                 os.makedirs(export_dir)
 
@@ -84,7 +84,7 @@ def export_db_to_json(db_name: str, table_name: str = "vacancies"):
         db_path = Path(db_name)
         if db_path.exists() and db_path.is_file():
 
-            export_dir = "../export"
+            export_dir = Path("export")
             if not os.path.exists(export_dir):
                 os.makedirs(export_dir)
 
@@ -109,7 +109,7 @@ def export_db_to_json(db_name: str, table_name: str = "vacancies"):
                 with open(export_path, "w", encoding="utf-8") as f:
                     json.dump(result, f, ensure_ascii=False, indent=4)
 
-                print(f"Данные успешно экспортированы в {json_file_name}")
+                print(f"Данные успешно экспортированы в {export_path}")
 
         else:
             print("Файл базы данных не найден или не является файлом")
